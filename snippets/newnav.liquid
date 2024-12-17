@@ -18,7 +18,18 @@
         </ul>
 
     </div>
-    <div>
+    <div class="right-nav-items">
+{% comment %} search in shopify {% endcomment %}
+ <form action="/search">
+ <input type="search" class="search-nav" placeholder="search">
+ </form>
 
+    <a href="/">
+     <img src="{{'d.png' |  asset_img_url}}" alt=""
+     height="40"
+     width="40"
+     loading="lazy"
+     >
+    </a>
     </div>
 </header>
