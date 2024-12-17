@@ -7,7 +7,12 @@
 "id": "show-announcement",
 "label": "Show Announcement",
 "default": true
-
+},
+{
+"type": "image_picker",
+"id": "image",
+"label": "Pick a image",
+"info": "Png Image is recommended"
 
 }],
 
@@ -16,5 +21,13 @@
 }
 
 {% endschema %}
+{% if section.settings.show-announcement %}
 
-<h2>  announcement barr </h2>
+{% if section.settings.image != blank %}
+     <img  width="40" height="40"  loading="lazy" src="{{ section.settings.image | image_url }}">
+{% else %}
+
+    <img width="40" height="40" loading="lazy" src="{{ 'a.png' | asset_url }}">
+    {% endif %}
+
+{% endif %}
