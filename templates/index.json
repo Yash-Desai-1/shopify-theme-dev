@@ -87,7 +87,11 @@
     },
     "three_images_aYBcxY": {
       "type": "three-images",
-      "settings": {}
+      "settings": {
+        "img": "shopify://shop_images/two.png",
+        "img2": "shopify://shop_images/three.png",
+        "img3": "shopify://shop_images/one.png"
+      }
     }
   },
   "order": [
