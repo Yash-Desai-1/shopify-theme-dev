@@ -141,18 +141,6 @@
       },
       "announce": {
         "type": "announce",
-        "blocks": {
-          "links_eCLqbV": {
-            "type": "links",
-            "settings": {
-              "text": "Help",
-              "link": ""
-            }
-          }
-        },
-        "block_order": [
-          "links_eCLqbV"
-        ],
         "settings": {
           "show-announcement": true,
           "background": "#f4f4f4",
