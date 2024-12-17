@@ -1,33 +1,66 @@
-
 {% schema %}
-{
-"name":"AnnouncementBar",
-"settings": [{
-"type": "checkbox",
-"id": "show-announcement",
-"label": "Show Announcement",
-"default": true
-},
-{
-"type": "image_picker",
-"id": "image",
-"label": "Pick a image",
-"info": "Png Image is recommended"
+  {
+    "name": "AnnouncementBar",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "show-announcement",
+        "label": "Show Announcement",
+        "default": true
+      }, {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Pick a image",
+        "info": "Png Image is recommended"
 
-}],
+      }, {
+        "type": "image_picker",
+        "id": "second-image",
+        "label": "Pick a image"
+      }
+    ],
 
-"presets": [
-]
-}
+    "presets": []
+  }
 
 {% endschema %}
 {% if section.settings.show-announcement %}
+  <section>
+    <div class="announcement-bar">
+      <div class="announce-left">
 
-{% if section.settings.image != blank %}
-     <img  width="40" height="40"  loading="lazy" src="{{ section.settings.image | image_url }}">
-{% else %}
+        {% if section.settings.image != blank %}
+          <img
+            width="40"
+            height="40"
+            loading="lazy"
+            src="{{ section.settings.image | image_url }}">
+        {% else %}
 
-    <img width="40" height="40" loading="lazy" src="{{ 'a.png' | asset_url }}">
-    {% endif %}
+          <img
+            width="40"
+            height="40"
+            loading="lazy"
+            src="{{ 'a.png' | asset_url }}">
+        {% endif %}
+        {% if section.settings.image != blank %}
+          <img
+            width="40"
+            height="40"
+            loading="lazy"
+            src="{{ section.settings.second-image | image_url }}">
+        {% else %}
+
+          <img
+            width="40"
+            height="40"
+            loading="lazy"
+            src="{{ 'b.png' | asset_url }}">
+        {% endif %}
+
+      </div>
+      <div class="announce-right"></div>
+    </div>
+  </section>
 
 {% endif %}
