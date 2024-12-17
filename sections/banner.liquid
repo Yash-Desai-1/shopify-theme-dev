@@ -1,4 +1,38 @@
+<section>
+    <div class="banner-wrapper">
+     <div class="slide-text" id="text1">Members: Free Shipping!</div>
+     <div class="slide-text" id="text2">Save Up to 40%</div>
+     <div class="slide-text" id="text3"> Get Your Gear Faster</div>
+    </div>
+</section>
+<style>
+    .banner-wrapper{
+        color:{{section.settings.txtcolor}};
+        background:{{section.settings.background}};
+    }
+</style>
+
 {% schema %}
 
+{
+    "name":"Banner",
+    "settings": [
+        {
+            "type":"color",
+            "id":"background",
+            "label": "Background",
+            "default": "#f4f4f4"
+        }, 
+        {
+            "type":"color",
+            "id":"txtcolor",
+            "label": "Text color",
+            "default": "#000000"
+        },
 
+    ],
+    "presets": [{
+        "name":"Banner"
+    }]
+}
 {% endschema %}
