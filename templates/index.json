@@ -88,6 +88,7 @@
     "three_images_aYBcxY": {
       "type": "three-images",
       "settings": {
+        "img": "shopify://shop_images/two_18c09bb4-1c5f-45c7-8f43-91da104e4d5b.png",
         "img2": "shopify://shop_images/three.png",
         "img3": "shopify://shop_images/one.png"
       }
