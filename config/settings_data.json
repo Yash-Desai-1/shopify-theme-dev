@@ -141,6 +141,18 @@
       },
       "announce": {
         "type": "announce",
+        "blocks": {
+          "links_PBnBmB": {
+            "type": "links",
+            "settings": {
+              "text": "Link",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "links_PBnBmB"
+        ],
         "settings": {
           "show-announcement": true,
           "background": "#f4f4f4",
