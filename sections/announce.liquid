@@ -59,6 +59,17 @@
     align-items:center;
     padding: 0 30px;
   }
+ ul>li{
+  list-style: none;
+ }
+  a{
+    text-decoration: none;
+
+  }
+  .announce-right{
+    display: flex;
+    margin-right:1rem;
+  }
 </style>
 {% if section.settings.show-announcement %}
   <section>
@@ -108,7 +119,9 @@
                 <a href="/account">Account</a>
                 </li>
                 {% else %}
+                <li>
                   <a href="/account/login">Sign In</a>
+                  </li>
               {% endif %}
           {%endif%}
 {%else%}
