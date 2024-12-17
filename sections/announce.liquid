@@ -98,18 +98,17 @@
       <div class="announce-right">
 
        <ul class="announce-right">
-        {%if section.blocks.size == 0%}
+        {%if section.blocks.size == 0 %}
           <li>
             <a href="#" >Help</a>
           </li>
           {%if shop.customer_accounts_enabled%}
             {% if customer %}
-              
               <li>
                 <a href="/account">Account</a>
                 </li>
                 {% else %}
-                  <a href="/account/login">Sign in</a>
+                  <a href="/account/login">Sign In</a>
               {% endif %}
           {%endif%}
 {%else%}
