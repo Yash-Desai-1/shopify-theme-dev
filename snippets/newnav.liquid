@@ -10,6 +10,11 @@
 
     </div>
     <div>
+        <ul class="middle-nav-bar">
+            {% for link in linklist['main-menu'].links %}  
+                <li> {{link.tile |  link_to: link.url}}</li>
+                {%endfor%}
+        </ul>
 
     </div>
     <div>
