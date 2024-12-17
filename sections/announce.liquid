@@ -57,6 +57,7 @@
     display:flex;
     justify-content:space-between;
     align-items:center;
+    padding: 0 30px;
   }
 </style>
 {% if section.settings.show-announcement %}
@@ -97,7 +98,7 @@
       <div class="announce-right">
 
        <ul class="announce-right">
-        {%if section.block.size ==0%}
+        {%if section.blocks.size == 0%}
           <li>
             <a href="#" >Help</a>
           </li>
