@@ -15,7 +15,7 @@
 
       }, {
         "type": "image_picker",
-        "id": "second-image",
+        "id": "secondImage",
         "label": "Pick a image"
       }
     ],
@@ -43,12 +43,12 @@
             loading="lazy"
             src="{{ 'a.png' | asset_url }}">
         {% endif %}
-        {% if section.settings.image != blank %}
+        {% if section.settings.secondImage != blank %}
           <img
             width="40"
             height="40"
             loading="lazy"
-            src="{{ section.settings.second-image | image_url }}">
+            src="{{ section.settings.secondImage | image_url }}">
         {% else %}
 
           <img
