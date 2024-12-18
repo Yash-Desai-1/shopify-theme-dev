@@ -154,60 +154,44 @@
       "new-footer": {
         "type": "new-footer",
         "blocks": {
-          "links_aq6jKe": {
+          "links_7aAeJ7": {
             "type": "links",
             "settings": {
-              "text": "link",
+              "text": "Contact Us",
               "link": ""
             }
           },
-          "links_XMCLJa": {
+          "links_KWiFDb": {
             "type": "links",
             "settings": {
-              "text": "link",
+              "text": "About us",
               "link": ""
             }
           },
-          "links_HjeArk": {
+          "links_CfaNTU": {
             "type": "links",
             "settings": {
-              "text": "link",
-              "link": ""
-            }
-          },
-          "links_pwryGy": {
-            "type": "links",
-            "settings": {
-              "text": "link",
-              "link": ""
-            }
-          },
-          "links_zADGFa": {
-            "type": "links",
-            "settings": {
-              "text": "link",
+              "text": "Founder",
               "link": ""
             }
           },
           "links_TTNj63": {
             "type": "links",
             "settings": {
-              "text": "Text here",
+              "text": "Our Team",
               "link": ""
             }
           }
         },
         "block_order": [
-          "links_aq6jKe",
-          "links_XMCLJa",
-          "links_HjeArk",
-          "links_pwryGy",
-          "links_zADGFa",
+          "links_7aAeJ7",
+          "links_KWiFDb",
+          "links_CfaNTU",
           "links_TTNj63"
         ],
         "settings": {
           "background": "#000000",
-          "text-color": "#F4F4F4"
+          "text-color": "#f4f4f4"
         }
       }
     },
