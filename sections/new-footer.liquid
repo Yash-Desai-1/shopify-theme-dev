@@ -6,7 +6,7 @@
         {%else%}
         {%for block in section.blocks %}
          <li>{{block.settings.txt |  link_to: block.settings.url}}</li>
-
+   {{block.settings.text}}
         {%endfor%}
       {%endif%}
 
