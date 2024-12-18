@@ -23,9 +23,12 @@
     }
     .collection-container{
         position:relative;
-        overflow-x: scroll;
+        overflow-x: hidden;
+        
     }
-
+    .collection-container::-webkit-scrollbar {
+  display: none;
+}
     .collection-wrapper{
         display: flex;
         transition: transform 0.3 ease;
