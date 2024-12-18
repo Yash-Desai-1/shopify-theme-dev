@@ -1,41 +1,47 @@
 <section class="all-collections">
-    <h1>Featured Collections</h1>
-    <div class="collection-container">
-        <div class="collection-wrapper">
-            {%for collection in collections %}
-
-             <h4>{{collection.title}}</h4>
-            {%endfor%}
+  <h1>Featured Collections</h1>
+  <div class="collection-container">
+    <div class="collection-wrapper">
+      {% for collection in collections %}
+        <div class="collection-card">
+          <img
+            height="300"
+            width="300"
+            loading="lazy"
+            src="{{ collection.featured_image | image_url}}">
+          <h4>{{ collection.title }}</h4>
         </div>
+      {% endfor %}
     </div>
+  </div>
 </section>
 
 
 {% schema %}
-{
+  {
     "name": "all-collections",
     "settings": [
-        {
-            "type": "text",
-             "id": "text",
-             "label": "txt"
-        },
-        {
+      {
+        "type": "text",
+        "id": "text",
+        "label": "txt"
+      }, {
         "type": "color",
         "id": "bgcol",
         "label": "Background color",
-        "default":"#f4f4f4"
-        },
-        {
-          "type":"color",
-          "id": "txtcol",
-          "label":"txt color",
-          "default": "#000000"
-        }
-        
-        ],
-        "presets":[{
-            "name":"all-collections"
-        }]
-}
+        "default": "#f4f4f4"
+      }, {
+        "type": "color",
+        "id": "txtcol",
+        "label": "txt color",
+        "default": "#000000"
+      }
+
+    ],
+    "presets": [
+      {
+        "name": "all-collections"
+      }
+    ]
+  }
 {% endschema %}

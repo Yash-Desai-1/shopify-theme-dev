@@ -4,7 +4,6 @@
         <div class="all-products-wrapper">
            {%for product in collections['first'].products %}
            <h3>{{ product.title |  link_to: product.url}}</h3>
-       <h2>hello</h2>
            {% endfor %}
         </div>
     </div>
