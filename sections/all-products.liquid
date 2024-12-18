@@ -2,17 +2,17 @@
     <h1> {{collections['first'].title}}</h1>
     <div class="product-container">
         <div class="all-products-wrapper">
-            <div class="product-card">
-
-                {%for product in collections['first'].products %}
+            
+            {%for product in collections['first'].products %}
+                <div class="product-card">
                     <img
                     height="300"
                     width="300"
                     loading="lazy"
                     src="{{ product.featured_image | image_url}}">
                 <h3>{{ product.title |  link_to: product.url}}</h3>
+                </div>
                 {% endfor %}
-            </div>
         </div>
     </div>
 </section>
