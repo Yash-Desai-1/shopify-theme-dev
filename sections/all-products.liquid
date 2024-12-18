@@ -5,6 +5,11 @@
             <div class="product-card">
 
                 {%for product in collections['first'].products %}
+                    <img
+                    height="300"
+                    width="300"
+                    loading="lazy"
+                    src="{{ product.featured_image | image_url}}">
                 <h3>{{ product.title |  link_to: product.url}}</h3>
                 {% endfor %}
             </div>
@@ -34,6 +39,7 @@
         justify-content: center;
         align-items: center;
         padding:0.5rem;
+        box-sizing: border-box;
     }
 
     .product-card h3 a{
