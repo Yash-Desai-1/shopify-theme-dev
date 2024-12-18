@@ -1,4 +1,14 @@
+<section class="all-collections">
+    <h1>Featured Collections</h1>
+    <div class="collection-container">
+        <div class="collection-wrapper">
+            {%for collection in collections %}
 
+             <h4>{{collection.title}}</h4>
+            {%endfor%}
+        </div>
+    </div>
+</section>
 
 
 {% schema %}
