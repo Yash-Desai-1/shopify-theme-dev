@@ -11,8 +11,36 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
+    "new_footer_ngpCiw": {
+      "type": "new-footer",
+      "blocks": {
+        "links_mQX4xc": {
+          "type": "links",
+          "settings": {
+            "txt": "Add policy",
+            "url": ""
+          }
+        },
+        "links_LMkTCc": {
+          "type": "links",
+          "settings": {
+            "txt": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "links_mQX4xc",
+        "links_LMkTCc"
+      ],
+      "settings": {
+        "txtcol": "#000000",
+        "bgcol": "#f4f4f4"
+      }
+    },
     "footer": {
       "type": "footer",
+      "disabled": true,
       "settings": {
         "color_scheme": "scheme-1",
         "newsletter_enable": true,
@@ -30,6 +58,7 @@
     }
   },
   "order": [
+    "new_footer_ngpCiw",
     "footer"
   ]
 }
