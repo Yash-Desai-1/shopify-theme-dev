@@ -146,6 +146,69 @@
           "background": "#f4f4f4",
           "textcolor": "#000000"
         }
+      },
+      "newheader": {
+        "type": "newheader",
+        "settings": {}
+      },
+      "new-footer": {
+        "type": "new-footer",
+        "blocks": {
+          "links_aq6jKe": {
+            "type": "links",
+            "settings": {
+              "text": "link",
+              "link": ""
+            }
+          },
+          "links_XMCLJa": {
+            "type": "links",
+            "settings": {
+              "text": "link",
+              "link": ""
+            }
+          },
+          "links_HjeArk": {
+            "type": "links",
+            "settings": {
+              "text": "link",
+              "link": ""
+            }
+          },
+          "links_pwryGy": {
+            "type": "links",
+            "settings": {
+              "text": "link",
+              "link": ""
+            }
+          },
+          "links_zADGFa": {
+            "type": "links",
+            "settings": {
+              "text": "link",
+              "link": ""
+            }
+          },
+          "links_TTNj63": {
+            "type": "links",
+            "settings": {
+              "text": "Text here",
+              "link": ""
+            }
+          }
+        },
+        "block_order": [
+          "links_aq6jKe",
+          "links_XMCLJa",
+          "links_HjeArk",
+          "links_pwryGy",
+          "links_zADGFa",
+          "links_TTNj63"
+        ],
+        "settings": {
+          "background": "#000000",
+          "text-color": "#F4F4F4"
+        }
       }
     },
     "content_for_index": [],
