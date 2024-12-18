@@ -58,6 +58,7 @@
   
   {%for link in linklists.footer.link %}
     <div class="footer-sec-2">
+        {{ link.title}}
    <p>{{ link.title |  link_to: link.url}}</p>
   </div>
   {%endfor%}
