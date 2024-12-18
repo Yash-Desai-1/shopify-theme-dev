@@ -1,8 +1,8 @@
 <section class="all-products">
-    <h4>All Products {{collections['Airforce'].title}}</h4>
+    <h4>All Products {{collections['first'].title}}</h4>
     <div class="product-container">
         <div class="all-products-wrapper">
-           {%for product in collectios['Airforce'].products %}
+           {%for product in collections['first'].products %}
            <h3>{{ product.title |  link_to: product.url}}</h3>
        <h2>hello</h2>
            {% endfor %}
