@@ -1,9 +1,9 @@
 <section class="all-products">
     <h4>All Products {{collections['Airforce'].title}}</h4>
-    <div class="all-products-container">
+    <div class="product-container">
         <div class="all-products-wrapper">
-           {%for product in collection.products%}
-           <h3>{{product.title}}</h3>
+           {%for product in collectios['Airforce'].products %}
+           <h3>{{ product.title |  link_to: product.url}}</h3>
        <h2>hello</h2>
            {% endfor %}
         </div>
