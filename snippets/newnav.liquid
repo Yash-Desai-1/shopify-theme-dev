@@ -20,10 +20,10 @@
     </div>
     <div class="right-nav-items">
 {% comment %} search in shopify {% endcomment %}
- <form action="/search">
+ {% comment %} <form action="/search">
  <input type="search" class="search-nav" placeholder="search">
- </form>
-
+ </form> {% endcomment %}
+{%  section 'main-search' %}
     <a href="/" >
      <img src="{{'d.png' |  asset_img_url}}" alt=""
      height="40"
