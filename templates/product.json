@@ -99,10 +99,50 @@
         "padding_top": 36,
         "padding_bottom": 28
       }
+    },
+    "collage_BtbqWh": {
+      "type": "collage",
+      "blocks": {
+        "image_bC3VpU": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/one_568838c2-c9eb-4132-88e1-d53e4ddfcafd.png"
+          }
+        },
+        "product_R6yXW8": {
+          "type": "product",
+          "settings": {
+            "product": "air-force-3",
+            "second_image": false
+          }
+        },
+        "collection_Gerxn4": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-collection"
+          }
+        }
+      },
+      "block_order": [
+        "image_bC3VpU",
+        "product_R6yXW8",
+        "collection_Gerxn4"
+      ],
+      "settings": {
+        "heading": "Explore Our New Products!",
+        "heading_size": "h1",
+        "desktop_layout": "left",
+        "mobile_layout": "column",
+        "card_styles": "product-card-wrapper",
+        "color_scheme": "",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
     }
   },
   "order": [
     "main",
-    "related-products"
+    "related-products",
+    "collage_BtbqWh"
   ]
 }
