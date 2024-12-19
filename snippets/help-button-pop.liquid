@@ -1,0 +1,59 @@
+<button type="button" id="help-button" class="btn help-button">Help</button>
+
+<div id="help-popup" class="popup" style="display: none;">
+     <div class="popup-content">
+         <p>This is some random help text. You can customize this later.</p>
+          <button id="popup-submit" class="btn">Submit</button>
+           </div> </div>
+
+<style>
+    .popup {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.5);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1000;
+    }
+
+    .popup-content {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        text-align: center;
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .popup-content p {
+        margin-bottom: 20px;
+    }
+</style>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const helpButton = document.getElementById('help-button');
+        const popup = document.getElementById('help-popup');
+        const popupSubmit = document.getElementById('popup-submit');
+
+        helpButton.addEventListener('click', function () { 
+            popup.style.display = 'flex';
+         });
+        popupSubmit.addEventListener('click', function () {
+            popup.style.display = 'none';
+        });
+    });
+</script>
+
+{% comment %} {
+"type":"checkbox",
+"settings": [{
+"type":"checkbox",
+"id": "show_custom_snippet",
+"label":"show custom snippet" ,
+"default": "false"
+}]
+}, {% endcomment %}

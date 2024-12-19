@@ -46,6 +46,8 @@
     <script src="{{ 'price-per-item.js' | asset_url }}" defer="defer"></script>
   {%- endif -%}
 
+
+
   {% if section.settings.image_zoom == 'hover' %}
     <script id="EnableZoomOnHover-main" src="{{ 'magnify.js' | asset_url }}" defer="defer"></script>
   {% endif %}
@@ -463,7 +465,10 @@
 
               {%- when 'variant_picker' -%}
                 {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
-              {%- when 'buy_buttons' -%}
+                     
+                
+                {%- when 'buy_buttons' -%}
+                  {% render 'help-button-pop' %}
                 {%- render 'buy-buttons',
                   block: block,
                   product: product,
@@ -733,6 +738,7 @@
     {
       "type": "@app"
     },
+
     {
       "type": "text",
       "name": "t:sections.main-product.blocks.text.name",
