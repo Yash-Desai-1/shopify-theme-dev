@@ -41,7 +41,8 @@
           "settings": {}
         },
         "help_button":{
-          "type": "button"
+          "type": "button",
+          "settings": {}
         },
         "buy_buttons": {
           "type": "buy_buttons",
