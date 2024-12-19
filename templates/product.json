@@ -38,10 +38,6 @@
           "type": "quantity_selector",
           "settings": {}
         },
-        "help_button_QFHPpQ": {
-          "type": "help_button",
-          "settings": {}
-        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -66,7 +62,6 @@
         "price",
         "variant_picker",
         "quantity_selector",
-        "help_button_QFHPpQ",
         "buy_buttons",
         "description",
         "share"
