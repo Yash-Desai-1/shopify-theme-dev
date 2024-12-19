@@ -40,6 +40,9 @@
           "type": "quantity_selector",
           "settings": {}
         },
+        "help_button":{
+          "type": "button"
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
