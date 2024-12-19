@@ -108,7 +108,7 @@
 
 {%for block in section.blocks%}
         <li>
-          <a href="{{block.settings.link}}">{{block.settings.text}}</a>
+          <a href="{{block.settings.link }}">{{ block.settings.text }}</a>
         </li>
 
   {%endfor%}
@@ -131,7 +131,7 @@
     padding: 0 30px;
     height:4.5rem;
   }
- ul>li{
+ ul > li{
   list-style: none;
   padding:0.5rem;
  }
@@ -139,8 +139,8 @@
     text-decoration: none;
      color:black;
   }
-  a:visited{
-    
+  a:hover{
+    color:yellowgreen;
   }
   .announce-right{
     display: flex;
