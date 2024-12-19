@@ -50,37 +50,7 @@
     "presets": []
   }
 {% endschema %}
-<style>
-  .announcement-bar{
-    background-color: {{section.settings.background}};
-    color:{{section.settings.textcolor}};
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding: 0 30px;
-    height:4.5rem;
-  }
- ul>li{
-  list-style: none;
-  padding:0.5rem;
- }
-  a{
-    text-decoration: none;
-     color:{{ section.settings.textcolor }};
-  }
-  a:visited{
-    
-  }
-  .announce-right{
-    display: flex;
-    margin-right:1rem;
-    
-  }
-  .announce-left{
-    display: flex;
-    align-items: center;
-  }
-</style>
+
 {% if section.settings.show-announcement %}
   <section>
     <div class="announcement-bar">
@@ -151,3 +121,34 @@
   </section>
 
 {% endif %}
+<style>
+  .announcement-bar{
+    background-color: {{section.settings.background}};
+    color:{{section.settings.textcolor}};
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 0 30px;
+    height:4.5rem;
+  }
+ ul>li{
+  list-style: none;
+  padding:0.5rem;
+ }
+  .announce-right > a{
+    text-decoration: none;
+     color:{{ section.settings.textcolor }};
+  }
+  a:visited{
+    
+  }
+  .announce-right{
+    display: flex;
+    margin-right:1rem;
+    
+  }
+  .announce-left{
+    display: flex;
+    align-items: center;
+  }
+</style>
