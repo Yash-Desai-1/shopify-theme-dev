@@ -5,8 +5,9 @@
          <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Cum, ab?
             <br>
             {{ product.title }}
+            <br>
             {{ product.price |  money }}
-            {{ product.category }}
+            {% comment %} {{ product.category }} {% endcomment %}
          </p>
           <button id="popup-submit" class="btn">Submit</button>
            </div> </div>
