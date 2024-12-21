@@ -20,8 +20,8 @@
     </div>
     <div class="right-nav-items">
 {% comment %} search in shopify {% endcomment %}
-<div class="template-search__search">
-    {%- if settings.predictive_search_enabled -%}
+{% comment %} <div class="template-search__search"> {% endcomment %}
+    {% comment %} {%- if settings.predictive_search_enabled -%}
       <predictive-search data-loading-text="{{ 'accessibility.loading' | t }}">
     {%- endif -%}
     <main-search>
@@ -78,11 +78,11 @@
     {%- if settings.predictive_search_enabled -%}
       </predictive-search>
     {%- endif -%}
-  </div>
+  </div> {% endcomment %}
  {% comment %} <form action="/search">
  <input type="search" class="search-nav" placeholder="search">
  </form>  {% endcomment %}
-{% comment %} {%  section 'main-search' %} {% endcomment %}
+{%  section 'main-search' %}
     <a href="/cart" >
      <img src="{{'d.png' |  asset_img_url}}" alt=""
      height="40"
