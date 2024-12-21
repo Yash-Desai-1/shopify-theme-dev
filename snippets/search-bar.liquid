@@ -1,59 +1,90 @@
-<form action="/search" method="get" class="search-form">
-  <input 
-    type="search" 
-    name="q" 
-    placeholder="Search products..." 
-    aria-label="Search"
-    class="search-input"
-    required 
-    class="search-nav"
-  />
-  <button type="submit" class="search-button">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-  </button>
-</form>
+<div id="search-container">
+    <form id="search-form">
+        <input 
+            type="search" 
+            id="search-input" 
+            placeholder="Search products..." 
+            aria-label="Search"
+            required
+        />
+        <button type="submit">Search</button>
+    </form>
+    <ul id="search-results"></ul>
+</div>
 
+<script>
+    document.getElementById('search-form').addEventListener('submit', async function (e) {
+    e.preventDefault(); // Prevent form submission
+
+    const query = document.getElementById('search-input').value.trim();
+    const resultsContainer = document.getElementById('search-results');
+
+    // Clear previous results
+    resultsContainer.innerHTML = '';
+
+    if (query) {
+        try {
+            const response = await fetch(`/search/suggest.json?q=${encodeURIComponent(query)}&resources[type]=product&resources[limit]=10`);
+            const data = await response.json();
+
+            if (data.resources.results.products.length > 0) {
+                data.resources.results.products.forEach(product => {
+                    const listItem = document.createElement('li');
+                    listItem.innerHTML = `
+                        <a href="${product.url}">
+                            <img src="${product.image}" alt="${product.title}" width="50" />
+                            <span>${product.title}</span>
+                        </a>
+                    `;
+                    resultsContainer.appendChild(listItem);
+                });
+            } else {
+                resultsContainer.innerHTML = '<li>No products found.</li>';
+            }
+        } catch (error) {
+            console.error('Error fetching search results:', error);
+            resultsContainer.innerHTML = '<li>There was an error fetching results. Please try again.</li>';
+        }
+    } else {
+        resultsContainer.innerHTML = '<li>Please enter a search term.</li>';
+    }
+});
+
+</script>
 <style>
 
 
-.search-form {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  margin-left: auto;
+#search-container {
+    margin: 20px;
 }
 
-.search-input {
-  padding: 8px 12px;
-  font-size: 14px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  width: 200px;
-  transition: width 0.3s;
+#search-form {
+    display: flex;
+    gap: 10px;
 }
 
-.search-input:focus {
-  width: 300px;
-  outline: none;
-  border-color: #007bff;
+#search-input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 300px;
 }
 
-.search-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+#search-results {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
 }
 
-.search-button .icon {
-  color: #333;
-  width: 20px;
-  height: 20px;
+#search-results li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 
-.search-button:hover .icon {
-  color: #007bff;
+#search-results img {
+    border-radius: 4px;
 }
+
 </style>
