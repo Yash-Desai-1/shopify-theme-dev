@@ -1,0 +1,59 @@
+<form action="/search" method="get" class="search-form">
+  <input 
+    type="search" 
+    name="q" 
+    placeholder="Search products..." 
+    aria-label="Search"
+    class="search-input"
+    required 
+    class="search-nav"
+  />
+  <button type="submit" class="search-button">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+  </button>
+</form>
+
+<style>
+
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-left: auto;
+}
+
+.search-input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+  transition: width 0.3s;
+}
+
+.search-input:focus {
+  width: 300px;
+  outline: none;
+  border-color: #007bff;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-button .icon {
+  color: #333;
+  width: 20px;
+  height: 20px;
+}
+
+.search-button:hover .icon {
+  color: #007bff;
+}
+</style>
