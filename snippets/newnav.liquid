@@ -80,8 +80,9 @@
     {%- endif -%}
   </div> {% endcomment %}
 
-  <form action="/search">
- <input type="search" class="search-nav" placeholder="search">
+  <form action="/search" method="get" role="search" id="searchForm">
+ <input type="search" class="search-nav" placeholder="search" name="q" aria-label="Search Our Site">
+ 
  </form> 
 
     <a href="/cart" >
